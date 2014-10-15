@@ -105,7 +105,7 @@ class kouhai_bot(ch.RoomManager):
 
   def onConnect(self, room):
     print("Connected")
-    room.message("Minna, konnichiwa!")
+    room.message("Yo!")
 
   def onReconnect(self, room):
     print("Reconnected")
@@ -212,9 +212,18 @@ class kouhai_bot(ch.RoomManager):
         room.message("*" + response[0] + args + response[1] + "*")
 
       elif cmd == "rape":
-        room.message("Come here " + args + " !")
-        self.setTimeout(2, room.message, "*Rapes " + args + " .*")
+        if user.name == "dimitheripper":
+            room.message("Fuck off Dimi.")
+        else:
+            room.message("Come here " + args + " !")
+            self.setTimeout(2, room.message, "*Rapes " + args + " .*")
 
+      elif cmd == "roll":
+        room.message("You rolled a " + str(random.randrange(1,100)) + "!")
+
+      elif cmd == "dimi":
+        room.message("Please hide any lolis, Dimi is around!")
+        
       else:
         room.message("I don't know that command!")
 
