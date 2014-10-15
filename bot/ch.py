@@ -1503,8 +1503,8 @@ class RoomManager:
   # Init
   ####
   def __init__(self, name = None, password = None, pm = True):
-    self._name = "KouhaiBOT"
-    self._password = password
+    self._name = "MoeIsLove"
+    self._password = "123456"
     self._running = False
     self._tasks = set()
     self._rooms = dict()
